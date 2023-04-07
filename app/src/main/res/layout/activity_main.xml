@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        app:cardMaxElevation="20dp"
+        app:cardCornerRadius="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/imgScan"
+                android:src="@drawable/scan"
+                android:layout_width="25dp"
+                android:layout_height="50dp"/>
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/imgDompet"
+                android:src="@drawable/dompet"
+                android:layout_toEndOf="@id/imgScan"
+                android:layout_width="20dp"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/txtSaldo"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_toEndOf="@id/imgDompet"
+                android:text="@string/rp2_719"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginBottom="20dp"
+                android:textSize="15sp"
+                android:text="@string/isi_saldo"
+                android:layout_toEndOf="@id/imgScan"
+                android:layout_below="@id/imgDompet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:id="@+id/imgKoin"
+                android:layout_marginRight="10dp"
+                android:layout_toEndOf="@id/txtSaldo"
+                android:src="@drawable/koin"
+                android:layout_width="40dp"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:id="@+id/txtKoin"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/imgKoin"
+                android:text="2.600"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_toEndOf="@id/txtSaldo"
+                android:layout_below="@id/imgKoin"
+                android:text="Koin Saya"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toEndOf="@id/txtKoin"
+                android:id="@+id/imgTf"
+                android:src="@drawable/transfer"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/imgTf"
+                android:text="Transfer"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:layout_toEndOf="@id/txtKoin"
+                android:layout_below="@id/imgTf"
+                android:text="Gratis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/voucher"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_margin = "5dp"
+                android:src="@drawable/voucher"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtVoucher"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/voucher"
+            android:textSize="8sp"
+            android:text="Gratis Ongkir dan Voucher"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pulsa"
+            android:layout_toRightOf="@id/voucher"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_margin = "5dp"
+                android:src="@drawable/pulsa"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtPulsa"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/pulsa"
+            android:layout_toRightOf="@id/txtVoucher"
+            android:textSize="8sp"
+            android:text="Pulsa, Tagihan, dan Tiket"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/shopeeMall"
+            android:layout_toRightOf="@id/pulsa"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_margin = "5dp"
+                android:src="@drawable/shopeemall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtshopeeMall"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/shopeeMall"
+            android:layout_toRightOf="@id/txtPulsa"
+            android:textSize="8sp"
+            android:text="Shopee Mall"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lokasi"
+            android:layout_toRightOf="@id/shopeeMall"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_margin = "5dp"
+                android:src="@drawable/lokasi"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtLokasi"
+            android:layout_below="@id/lokasi"
+            android:layout_toRightOf="@id/txtshopeeMall"
+            android:text="ShopeePay Sekitarmu"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="8sp"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/berkah"
+            android:layout_toRightOf="@id/lokasi"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_margin = "5dp"
+                android:src="@drawable/berkah"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtBerkah"
+            android:layout_below="@id/berkah"
+            android:layout_toRightOf="@id/txtLokasi"
+            android:text="Shopee Berkah"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="8sp"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/games"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_margin = "5dp"
+                android:src="@drawable/games"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtGames"
+            android:layout_below="@id/games"
+            android:text="Shopee Games"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="8sp"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/food"
+            android:layout_toRightOf="@id/games"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_margin = "5dp"
+                android:src="@drawable/ShopeeFood"
+                android:layout_width="45dp"
+                android:layout_height="45dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtFood"
+            android:layout_below="@id/food"
+            android:layout_toRightOf="@id/txtGames"
+            android:text="Shopee Food"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="8sp"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lokal"
+            android:layout_toRightOf="@id/food"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_margin = "5dp"
+                android:src="@drawable/lokal"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtLokal"
+            android:layout_below="@id/lokal"
+            android:layout_toRightOf="@id/txtFood"
+            android:text="Shopee Pilih Lokal"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="8sp"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/paylater"
+            android:layout_toRightOf="@id/lokal"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_margin = "5dp"
+                android:src="@drawable/paylater"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtpayLater"
+            android:layout_below="@id/paylater"
+            android:layout_toRightOf="@id/txtLokal"
+            android:text="SPay Later"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="8sp"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lainnya"
+            android:layout_toRightOf="@id/paylater"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_margin = "5dp"
+                android:src="@drawable/lainnya"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtLainnya"
+            android:layout_below="@id/lainnya"
+            android:layout_toRightOf="@id/txtpayLater"
+            android:text="Lainnya"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="8sp"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="15dp"
+            android:backgroundTint="@color/red"
+            android:layout_width="100dp"
+            android:layout_height="110dp">
+
+            <RelativeLayout
+                android:id="@+id/klaim"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/txtSeaBank"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/teal_700"
+                    android:paddingHorizontal="15dp"
+                    android:text="Sea Bank"
+                    android:textColor="@color/white"
+                    android:textSize="7sp" />
+
+                <TextView
+                    android:id="@+id/txtKlaim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:text="KLAIM"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt110rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtKlaim"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="110RB"
+                    android:textColor="@color/yellow"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtdiSini"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt110rb"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="DI SINI"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="15dp"
+            android:backgroundTint="@color/red"
+            android:layout_width="150dp"
+            android:layout_height="110dp">
+
+            <RelativeLayout
+                android:id="@+id/seabank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:background="@color/teal_700"
+                    android:paddingHorizontal="17dp"
+                    android:id="@+id/txtramadhansale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="7sp"
+                    android:text="BIG RAMADHAN SALE"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/txt5kali"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/yellow"
+                    android:textStyle="bold"
+                    android:text="5X SEHARI"
+                    android:textSize="18sp"
+                    android:paddingHorizontal="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginBottom="10dp"
+                    android:paddingHorizontal="10dp"
+                    android:layout_below="@id/txt5kali"
+                    android:id="@+id/txtratusan"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="RATUSAN PRODUK RP1"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="15dp"
+            android:backgroundTint="@color/red"
+            android:layout_width="100dp"
+            android:layout_height="110dp">
+
+            <RelativeLayout
+                android:id="@+id/card3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/txtflashSale"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/teal_700"
+                    android:paddingHorizontal="15dp"
+                    android:text="Flas Sale"
+                    android:textColor="@color/white"
+                    android:textSize="7sp" />
+
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/img"
+                    android:layout_below="@id/txtflashSale"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/imgCard3"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"/>
+
+                <TextView
+                    android:paddingHorizontal="13dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/txtRp1"
+                    android:layout_below="@id/imgCard3"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@color/white"
+                    android:text="RP1"
+                    android:textColor="@color/red"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
